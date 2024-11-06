@@ -1,0 +1,544 @@
+# //  Questa Sim
+# //  Version 2022.2_1 linux May 19 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -classdebug -msgmode both -do "set NoQuitOnFinish 1; do wave.do" optimized_debug_top_tb 
+# Start time: 20:00:57 on Apr 01,2023
+# Loading sv_std.std
+# Loading work.wb_if(fast)
+# Loading work.parameter_pkg(fast)
+# Loading work.i2c_if(fast)
+# Loading work.ncsu_pkg(fast)
+# Loading work.wb_pkg(fast)
+# Loading work.i2c_pkg(fast)
+# Loading work.i2cmb_env_pkg(fast)
+# Loading work.top(fast)
+# Loading work.wb_if(fast__2)
+# Loading work.i2c_if(fast__2)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.iicmb_m_wb(str)#1
+# Loading work.wishbone(rtl)#1
+# Loading ieee.numeric_std(body)
+# Loading work.iicmb_pkg(body)
+# Loading work.regblock(rtl)#1
+# Loading work.iicmb_int_pkg(body)
+# Loading work.iicmb_m(str)#1
+# Loading work.mbyte(rtl)#1
+# Loading work.mbit(rtl)#1
+# Loading work.conditioner_mux(str)#1
+# Loading work.conditioner(str)#1
+# Loading work.filter(rtl)#1
+# Loading work.bus_state(rtl)#1
+# ** Warning: (vsim-3764) Stand-alone call to function 'convert2string' treated as implicit void cast.
+#    Time: 0 ps  Iteration: 0  Region: /i2c_pkg::i2c_monitor File: /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/interface_packages/i2c_pkg/src/i2c_monitor.svh Line: 56
+# set NoQuitOnFinish 1
+# 1
+#  do wave.do
+run 6ms
+# ----------------------------------------------------------------
+# //  NCSU Package 
+# //  Version 1.0a
+# ----------------------------------------------------------------
+# 
+# 
+#                    0: i2cmb_env_pkg.i2cmb_environment.build called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.i2c_agt.driver called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.i2c_agt.monitor called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.wb_agt.driver called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.wb_agt.monitor called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.pred called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.scbd called
+#                    0: i2cmb_env_pkg.i2cmb_environment.get_i2c_agent called
+#                    0: i2cmb_env_pkg.i2cmb_environment.get_wb_agent called
+# 0.00 us: i2cmb_env_pkg.i2cmb_environment.run called
+# 
+# 
+# ************************************************************
+# ********************-I2C bus Control-***********************
+# 
+# 
+# *********************************************************************************************************
+# time:0.01 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - , op - x         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:0.01 us, op: x, addr: 00, data:  
+# 
+# 
+# 
+# ------------------------------------------------------------
+# Task 1: writing 32 incrementing values from 0 to 32 to slave
+# ------------------------------------------------------------
+# 
+# 
+# time: 0.29 us,i2cmb_env_pkg.i2cmb_generator.run.wb_run,  sending start command
+# env.scbd nb_transport: expected transaction I2C: time:0.37 us, op: x, addr: 00, data:  
+# 
+# 
+# 
+# env.pred WB: Time 0.37 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:0.37 us, op: x, addr: 00, data:  
+# 
+# env.pred WB: Time 0.37 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# *********************************************************************************************************
+# time:0.43 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - , op - x         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:0.43 us, op: x, addr: 00, data:  
+# 
+# 
+# time 0.43 us,------------- Start condition detected-------------
+# 
+# env.scbd nb_transport: expected transaction I2C: time:9.89 us, op: x, addr: 00, data:  
+# 
+# env.pred WB: Time 9.89 us : W/R : 0 , Addr: 0x02, Data: 0x84 
+# 
+# env.pred WB: Time 9.95 us : W/R : 1 , Addr: 0x01, Data: 0x44 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:9.95 us, op: x, addr: 22, data:  
+# 
+# 
+# 
+# 
+# time =158.75 us,------------------- Address capture: 44--------------------
+# 
+# *********************************************************************************************************
+# time:158.75 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 22, data - , op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:158.75 us, op: 0, addr: 22, data:  
+# 
+# time: 190.53 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 190.53 us : W/R : 1 , Addr: 0x01, Data: 0x00 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:190.53 us, op: x, addr: 22, data:  
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:367.75 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 00, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:367.75 us, op: 0, addr: 00, data: 00 
+# 
+# time: 371.11 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 371.11 us : W/R : 1 , Addr: 0x01, Data: 0x01 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:371.11 us, op: x, addr: 22, data: 00 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:548.33 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 01, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:548.33 us, op: 0, addr: 00, data: 01 
+# 
+# time: 551.69 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 551.69 us : W/R : 1 , Addr: 0x01, Data: 0x02 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:551.69 us, op: x, addr: 22, data: 00 01 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:728.91 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 02, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:728.91 us, op: 0, addr: 00, data: 02 
+# 
+# time: 732.27 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 732.27 us : W/R : 1 , Addr: 0x01, Data: 0x03 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:732.27 us, op: x, addr: 22, data: 00 01 02 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:909.49 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 03, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:909.49 us, op: 0, addr: 00, data: 03 
+# 
+# time: 912.85 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 912.85 us : W/R : 1 , Addr: 0x01, Data: 0x04 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:912.85 us, op: x, addr: 22, data: 00 01 02 03 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:1090.07 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 04, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1090.07 us, op: 0, addr: 00, data: 04 
+# 
+# time: 1093.43 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 1093.43 us : W/R : 1 , Addr: 0x01, Data: 0x05 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:1093.43 us, op: x, addr: 22, data: 00 01 02 03 04 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:1270.65 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 05, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1270.65 us, op: 0, addr: 00, data: 05 
+# 
+# time: 1274.01 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 1274.01 us : W/R : 1 , Addr: 0x01, Data: 0x06 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:1274.01 us, op: x, addr: 22, data: 00 01 02 03 04 05 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:1451.23 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 06, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1451.23 us, op: 0, addr: 00, data: 06 
+# 
+# time: 1454.59 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 1454.59 us : W/R : 1 , Addr: 0x01, Data: 0x07 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:1454.59 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:1631.81 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 07, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1631.81 us, op: 0, addr: 00, data: 07 
+# 
+# time: 1635.17 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 1635.17 us : W/R : 1 , Addr: 0x01, Data: 0x08 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:1635.17 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:1812.39 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 08, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1812.39 us, op: 0, addr: 00, data: 08 
+# 
+# time: 1815.75 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 1815.75 us : W/R : 1 , Addr: 0x01, Data: 0x09 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:1815.75 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:1992.97 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 09, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1992.97 us, op: 0, addr: 00, data: 09 
+# 
+# time: 1996.33 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 1996.33 us : W/R : 1 , Addr: 0x01, Data: 0x0a 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:1996.33 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:2173.55 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0a, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2173.55 us, op: 0, addr: 00, data: 0a 
+# 
+# time: 2176.91 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 2176.91 us : W/R : 1 , Addr: 0x01, Data: 0x0b 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:2176.91 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:2354.13 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0b, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2354.13 us, op: 0, addr: 00, data: 0b 
+# 
+# time: 2357.49 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 2357.49 us : W/R : 1 , Addr: 0x01, Data: 0x0c 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:2357.49 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:2534.71 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0c, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2534.71 us, op: 0, addr: 00, data: 0c 
+# 
+# time: 2538.07 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 2538.07 us : W/R : 1 , Addr: 0x01, Data: 0x0d 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:2538.07 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:2715.29 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0d, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2715.29 us, op: 0, addr: 00, data: 0d 
+# 
+# time: 2718.65 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 2718.65 us : W/R : 1 , Addr: 0x01, Data: 0x0e 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:2718.65 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:2895.87 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0e, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2895.87 us, op: 0, addr: 00, data: 0e 
+# 
+# time: 2899.23 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 2899.23 us : W/R : 1 , Addr: 0x01, Data: 0x0f 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:2899.23 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:3076.45 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0f, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3076.45 us, op: 0, addr: 00, data: 0f 
+# 
+# time: 3079.81 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 3079.81 us : W/R : 1 , Addr: 0x01, Data: 0x10 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:3079.81 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:3257.03 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 10, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3257.03 us, op: 0, addr: 00, data: 10 
+# 
+# time: 3260.39 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 3260.39 us : W/R : 1 , Addr: 0x01, Data: 0x11 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:3260.39 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:3437.61 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 11, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3437.61 us, op: 0, addr: 00, data: 11 
+# 
+# time: 3440.97 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 3440.97 us : W/R : 1 , Addr: 0x01, Data: 0x12 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:3440.97 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:3618.19 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 12, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3618.19 us, op: 0, addr: 00, data: 12 
+# 
+# time: 3621.55 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 3621.55 us : W/R : 1 , Addr: 0x01, Data: 0x13 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:3621.55 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:3798.77 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 13, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3798.77 us, op: 0, addr: 00, data: 13 
+# 
+# time: 3802.13 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 3802.13 us : W/R : 1 , Addr: 0x01, Data: 0x14 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:3802.13 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:3979.35 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 14, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3979.35 us, op: 0, addr: 00, data: 14 
+# 
+# time: 3982.71 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 3982.71 us : W/R : 1 , Addr: 0x01, Data: 0x15 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:3982.71 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:4159.93 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 15, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4159.93 us, op: 0, addr: 00, data: 15 
+# 
+# time: 4163.29 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 4163.29 us : W/R : 1 , Addr: 0x01, Data: 0x16 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:4163.29 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:4340.51 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 16, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4340.51 us, op: 0, addr: 00, data: 16 
+# 
+# time: 4343.87 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 4343.87 us : W/R : 1 , Addr: 0x01, Data: 0x17 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:4343.87 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:4521.09 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 17, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4521.09 us, op: 0, addr: 00, data: 17 
+# 
+# time: 4524.45 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 4524.45 us : W/R : 1 , Addr: 0x01, Data: 0x18 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:4524.45 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:4701.67 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 18, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4701.67 us, op: 0, addr: 00, data: 18 
+# 
+# time: 4705.03 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 4705.03 us : W/R : 1 , Addr: 0x01, Data: 0x19 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:4705.03 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:4882.25 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 19, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4882.25 us, op: 0, addr: 00, data: 19 
+# 
+# time: 4885.61 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 4885.61 us : W/R : 1 , Addr: 0x01, Data: 0x1a 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:4885.61 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:5062.83 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1a, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5062.83 us, op: 0, addr: 00, data: 1a 
+# 
+# time: 5066.19 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 5066.19 us : W/R : 1 , Addr: 0x01, Data: 0x1b 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:5066.19 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:5243.41 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1b, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5243.41 us, op: 0, addr: 00, data: 1b 
+# 
+# time: 5246.77 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 5246.77 us : W/R : 1 , Addr: 0x01, Data: 0x1c 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:5246.77 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:5423.99 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1c, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5423.99 us, op: 0, addr: 00, data: 1c 
+# 
+# time: 5427.35 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 5427.35 us : W/R : 1 , Addr: 0x01, Data: 0x1d 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:5427.35 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:5604.57 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1d, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5604.57 us, op: 0, addr: 00, data: 1d 
+# 
+# time: 5607.93 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 5607.93 us : W/R : 1 , Addr: 0x01, Data: 0x1e 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:5607.93 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:5785.15 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1e, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5785.15 us, op: 0, addr: 00, data: 1e 
+# 
+# time: 5788.51 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Sending data
+# env.pred WB: Time 5788.51 us : W/R : 1 , Addr: 0x01, Data: 0x1f 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:5788.51 us, op: x, addr: 22, data: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 
+# 
+# 
+# 
+# *********************************************************************************************************
+# time:5965.73 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1f, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5965.73 us, op: 0, addr: 00, data: 1f 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:5969.09 us, op: x, addr: 00, data:  
+# 
+# 
+# time:5985.93 us,---------------------Stop condition detected----------------
+# 
+# *********************************************************************************************************
+# time:5985.93 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1f, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5985.93 us, op: 0, addr: 00, data: 1f 
+# 
+# 
+# 
+# ---------------------------------------------------------------
+# Task 2: Reading 32 incrementing values from 100 to 131 to slave
+# ---------------------------------------------------------------
+# 
+# 
+# time: 5985.99 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run sending start command
+# env.scbd nb_transport: expected transaction I2C: time:5986.01 us, op: x, addr: 00, data:  
+# 
+# env.scbd nb_transport: expected transaction I2C: time:5986.07 us, op: x, addr: 00, data:  
+# 
+# 
+# 
+# env.pred WB: Time 5986.07 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# env.scbd nb_transport: expected transaction I2C: time:5986.07 us, op: x, addr: 00, data:  
+# 
+# env.pred WB: Time 5986.07 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# 
+# time 5995.73 us,------------- Start condition detected-------------
+# 
+# *********************************************************************************************************
+# time:5995.73 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1f, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5995.73 us, op: 0, addr: 00, data: 1f 
+# 
+# End time: 20:08:55 on Apr 01,2023, Elapsed time: 0:07:58
+# Errors: 0, Warnings: 1

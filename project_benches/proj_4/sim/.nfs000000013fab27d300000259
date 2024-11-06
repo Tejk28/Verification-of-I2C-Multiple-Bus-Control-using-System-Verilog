@@ -1,0 +1,1413 @@
+# vsim -c -coverage -sv_seed 1234567890 -do "set NoQuitOnFinish 1; run -a; coverage attribute -name TESTNAME -value i2cmb_test; coverage save wb_transaction.1234567890.ucdb; quit -f" "+GEN_TRANS_TYPE=wb_transaction" "+GEN_TEST_TYPE=i2cmb_test" optimized_debug_top_tb 
+# Start time: 16:52:22 on Apr 25,2023
+# //  Questa Sim
+# //  Version 2022.2_1 linux May 19 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.wb_if(fast)
+# Loading work.parameter_pkg(fast)
+# Loading work.i2c_if(fast)
+# Loading work.ncsu_pkg(fast)
+# Loading work.wb_pkg(fast)
+# Loading work.i2c_pkg(fast)
+# Loading work.i2cmb_env_pkg(fast)
+# Loading work.top(fast)
+# Loading work.wb_if(fast__2)
+# Loading work.i2c_if(fast__2)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.iicmb_m_wb(str)#1
+# Loading work.wishbone(rtl)#1
+# Loading ieee.numeric_std(body)
+# Loading work.iicmb_pkg(body)
+# Loading work.regblock(rtl)#1
+# Loading work.iicmb_int_pkg(body)
+# Loading work.iicmb_m(str)#1
+# Loading work.mbyte(rtl)#1
+# Loading work.mbit(rtl)#1
+# Loading work.conditioner_mux(str)#1
+# Loading work.conditioner(str)#1
+# Loading work.filter(rtl)#1
+# Loading work.bus_state(rtl)#1
+# ** Warning: (vsim-3764) Stand-alone call to function 'convert2string' treated as implicit void cast.
+#    Time: 0 ps  Iteration: 0  Region: /i2c_pkg::i2c_monitor File: /mnt/ncsudrive/t/tkulkar/ECE745/project_4/ece745_projects/project_benches/proj_4/sim/../../../verification_ip/interface_packages/i2c_pkg/src/i2c_monitor.svh Line: 56
+# set NoQuitOnFinish 1
+# 1
+#  run -a
+# ----------------------------------------------------------------
+# //  NCSU Package 
+# //  Version 1.0a
+# ----------------------------------------------------------------
+# 
+# 
+# i2cmb_env_pkg.i2cmb_test.new GEN_TEST_TYPE = i2cmb_test
+#                    0: i2cmb_env_pkg.i2cmb_environment.build called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.i2c_agt.driver called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.i2c_agt.monitor called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.i2c_agt.coverage called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.wb_agt.driver called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.wb_agt.monitor called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.wb_agt.coverage called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.pred called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.scbd called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of env.coverage called
+#                    0: i2cmb_env_pkg.i2cmb_environment.get_i2c_agent called
+#                    0: i2cmb_env_pkg.i2cmb_environment.get_wb_agent called
+# 0.00 us: i2cmb_env_pkg.i2cmb_environment.run called
+# 
+# 
+# ************************************************************
+# ********************-I2C bus Control-***********************
+# 
+# 
+# *********************************************************************************************************
+# time:0.01 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - , op - x         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:0.01 us, op: x, addr: 00, data:  
+# 
+# NCSU_INFO:Time 0.17 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 0.25 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 0.31 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 0.39 us:ncsu_component::nb_put():  of env.coverage called
+# 
+# 
+# ------------------------------------------------------------
+# Task 1: writing 32 incrementing values from 0 to 32 to slave
+# ------------------------------------------------------------
+# 
+# 
+# NCSU_INFO:Time 0.47 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 0.53 us:ncsu_component::nb_put():  of env.coverage called
+# 
+# 
+# env.pred WB: Time 0.53 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# env.pred WB: Time 0.53 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# *********************************************************************************************************
+# time:0.59 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - , op - x         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:0.59 us, op: x, addr: 00, data:  
+# 
+# 
+# time 0.59 us,------------- Start condition detected-------------
+# 
+# NCSU_INFO:Time 10.05 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 10.05 us : W/R : 0 , Addr: 0x02, Data: 0x84 
+# 
+# NCSU_INFO:Time 10.11 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 10.11 us : W/R : 1 , Addr: 0x01, Data: 0x44 
+# 
+# 
+# 
+# NCSU_INFO:Time 10.19 us:ncsu_component::nb_put():  of env.coverage called
+# time: 158.91 us, top.i2c_bus.monitor Address Captured 
+# 
+# time =158.91 us,------------------- Address capture: 44--------------------
+# 
+# *********************************************************************************************************
+# time:187.33 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 22, data - , op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:187.33 us, op: 0, addr: 22, data:  
+# 
+# NCSU_INFO:Time 190.63 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 190.69 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 190.69 us : W/R : 1 , Addr: 0x01, Data: 0x00 
+# 
+# 
+# 
+# NCSU_INFO:Time 190.77 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:367.91 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - , op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:367.91 us, op: 0, addr: 00, data:  
+# 
+# *********************************************************************************************************
+# time:367.91 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 00, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:367.91 us, op: 0, addr: 00, data: 00 
+# 
+# NCSU_INFO:Time 371.21 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 371.27 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 371.27 us : W/R : 1 , Addr: 0x01, Data: 0x01 
+# 
+# 
+# 
+# NCSU_INFO:Time 371.35 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:548.49 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 00, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:548.49 us, op: 0, addr: 00, data: 00 
+# 
+# *********************************************************************************************************
+# time:548.49 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 01, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:548.49 us, op: 0, addr: 00, data: 01 
+# 
+# NCSU_INFO:Time 551.79 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 551.85 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 551.85 us : W/R : 1 , Addr: 0x01, Data: 0x02 
+# 
+# 
+# 
+# NCSU_INFO:Time 551.93 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:729.07 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 01, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:729.07 us, op: 0, addr: 00, data: 01 
+# 
+# *********************************************************************************************************
+# time:729.07 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 02, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:729.07 us, op: 0, addr: 00, data: 02 
+# 
+# NCSU_INFO:Time 732.37 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 732.43 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 732.43 us : W/R : 1 , Addr: 0x01, Data: 0x03 
+# 
+# 
+# 
+# NCSU_INFO:Time 732.51 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:909.65 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 02, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:909.65 us, op: 0, addr: 00, data: 02 
+# 
+# *********************************************************************************************************
+# time:909.65 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 03, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:909.65 us, op: 0, addr: 00, data: 03 
+# 
+# NCSU_INFO:Time 912.95 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 913.01 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 913.01 us : W/R : 1 , Addr: 0x01, Data: 0x04 
+# 
+# 
+# 
+# NCSU_INFO:Time 913.09 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:1090.23 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 03, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1090.23 us, op: 0, addr: 00, data: 03 
+# 
+# *********************************************************************************************************
+# time:1090.23 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 04, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1090.23 us, op: 0, addr: 00, data: 04 
+# 
+# NCSU_INFO:Time 1093.53 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 1093.59 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 1093.59 us : W/R : 1 , Addr: 0x01, Data: 0x05 
+# 
+# 
+# 
+# NCSU_INFO:Time 1093.67 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:1270.81 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 04, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1270.81 us, op: 0, addr: 00, data: 04 
+# 
+# *********************************************************************************************************
+# time:1270.81 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 05, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1270.81 us, op: 0, addr: 00, data: 05 
+# 
+# NCSU_INFO:Time 1274.11 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 1274.17 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 1274.17 us : W/R : 1 , Addr: 0x01, Data: 0x06 
+# 
+# 
+# 
+# NCSU_INFO:Time 1274.25 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:1451.39 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 05, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1451.39 us, op: 0, addr: 00, data: 05 
+# 
+# *********************************************************************************************************
+# time:1451.39 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 06, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1451.39 us, op: 0, addr: 00, data: 06 
+# 
+# NCSU_INFO:Time 1454.69 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 1454.75 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 1454.75 us : W/R : 1 , Addr: 0x01, Data: 0x07 
+# 
+# 
+# 
+# NCSU_INFO:Time 1454.83 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:1631.97 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 06, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1631.97 us, op: 0, addr: 00, data: 06 
+# 
+# *********************************************************************************************************
+# time:1631.97 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 07, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1631.97 us, op: 0, addr: 00, data: 07 
+# 
+# NCSU_INFO:Time 1635.27 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 1635.33 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 1635.33 us : W/R : 1 , Addr: 0x01, Data: 0x08 
+# 
+# 
+# 
+# NCSU_INFO:Time 1635.41 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:1812.55 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 07, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1812.55 us, op: 0, addr: 00, data: 07 
+# 
+# *********************************************************************************************************
+# time:1812.55 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 08, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1812.55 us, op: 0, addr: 00, data: 08 
+# 
+# NCSU_INFO:Time 1815.85 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 1815.91 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 1815.91 us : W/R : 1 , Addr: 0x01, Data: 0x09 
+# 
+# 
+# 
+# NCSU_INFO:Time 1815.99 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:1993.13 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 08, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1993.13 us, op: 0, addr: 00, data: 08 
+# 
+# *********************************************************************************************************
+# time:1993.13 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 09, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:1993.13 us, op: 0, addr: 00, data: 09 
+# 
+# NCSU_INFO:Time 1996.43 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 1996.49 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 1996.49 us : W/R : 1 , Addr: 0x01, Data: 0x0a 
+# 
+# 
+# 
+# NCSU_INFO:Time 1996.57 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:2173.71 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 09, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2173.71 us, op: 0, addr: 00, data: 09 
+# 
+# *********************************************************************************************************
+# time:2173.71 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0a, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2173.71 us, op: 0, addr: 00, data: 0a 
+# 
+# NCSU_INFO:Time 2177.01 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 2177.07 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 2177.07 us : W/R : 1 , Addr: 0x01, Data: 0x0b 
+# 
+# 
+# 
+# NCSU_INFO:Time 2177.15 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:2354.29 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0a, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2354.29 us, op: 0, addr: 00, data: 0a 
+# 
+# *********************************************************************************************************
+# time:2354.29 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0b, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2354.29 us, op: 0, addr: 00, data: 0b 
+# 
+# NCSU_INFO:Time 2357.59 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 2357.65 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 2357.65 us : W/R : 1 , Addr: 0x01, Data: 0x0c 
+# 
+# 
+# 
+# NCSU_INFO:Time 2357.73 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:2534.87 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0b, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2534.87 us, op: 0, addr: 00, data: 0b 
+# 
+# *********************************************************************************************************
+# time:2534.87 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0c, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2534.87 us, op: 0, addr: 00, data: 0c 
+# 
+# NCSU_INFO:Time 2538.17 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 2538.23 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 2538.23 us : W/R : 1 , Addr: 0x01, Data: 0x0d 
+# 
+# 
+# 
+# NCSU_INFO:Time 2538.31 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:2715.45 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0c, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2715.45 us, op: 0, addr: 00, data: 0c 
+# 
+# *********************************************************************************************************
+# time:2715.45 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0d, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2715.45 us, op: 0, addr: 00, data: 0d 
+# 
+# NCSU_INFO:Time 2718.75 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 2718.81 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 2718.81 us : W/R : 1 , Addr: 0x01, Data: 0x0e 
+# 
+# 
+# 
+# NCSU_INFO:Time 2718.89 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:2896.03 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0d, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2896.03 us, op: 0, addr: 00, data: 0d 
+# 
+# *********************************************************************************************************
+# time:2896.03 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0e, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:2896.03 us, op: 0, addr: 00, data: 0e 
+# 
+# NCSU_INFO:Time 2899.33 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 2899.39 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 2899.39 us : W/R : 1 , Addr: 0x01, Data: 0x0f 
+# 
+# 
+# 
+# NCSU_INFO:Time 2899.47 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:3076.61 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0e, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3076.61 us, op: 0, addr: 00, data: 0e 
+# 
+# *********************************************************************************************************
+# time:3076.61 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0f, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3076.61 us, op: 0, addr: 00, data: 0f 
+# 
+# NCSU_INFO:Time 3079.91 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 3079.97 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 3079.97 us : W/R : 1 , Addr: 0x01, Data: 0x10 
+# 
+# 
+# 
+# NCSU_INFO:Time 3080.05 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:3257.19 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 0f, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3257.19 us, op: 0, addr: 00, data: 0f 
+# 
+# *********************************************************************************************************
+# time:3257.19 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 10, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3257.19 us, op: 0, addr: 00, data: 10 
+# 
+# NCSU_INFO:Time 3260.49 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 3260.55 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 3260.55 us : W/R : 1 , Addr: 0x01, Data: 0x11 
+# 
+# 
+# 
+# NCSU_INFO:Time 3260.63 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:3437.77 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 10, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3437.77 us, op: 0, addr: 00, data: 10 
+# 
+# *********************************************************************************************************
+# time:3437.77 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 11, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3437.77 us, op: 0, addr: 00, data: 11 
+# 
+# NCSU_INFO:Time 3441.07 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 3441.13 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 3441.13 us : W/R : 1 , Addr: 0x01, Data: 0x12 
+# 
+# 
+# 
+# NCSU_INFO:Time 3441.21 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:3618.35 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 11, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3618.35 us, op: 0, addr: 00, data: 11 
+# 
+# *********************************************************************************************************
+# time:3618.35 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 12, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3618.35 us, op: 0, addr: 00, data: 12 
+# 
+# NCSU_INFO:Time 3621.65 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 3621.71 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 3621.71 us : W/R : 1 , Addr: 0x01, Data: 0x13 
+# 
+# 
+# 
+# NCSU_INFO:Time 3621.79 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:3798.93 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 12, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3798.93 us, op: 0, addr: 00, data: 12 
+# 
+# *********************************************************************************************************
+# time:3798.93 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 13, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3798.93 us, op: 0, addr: 00, data: 13 
+# 
+# NCSU_INFO:Time 3802.23 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 3802.29 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 3802.29 us : W/R : 1 , Addr: 0x01, Data: 0x14 
+# 
+# 
+# 
+# NCSU_INFO:Time 3802.37 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:3979.51 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 13, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3979.51 us, op: 0, addr: 00, data: 13 
+# 
+# *********************************************************************************************************
+# time:3979.51 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 14, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:3979.51 us, op: 0, addr: 00, data: 14 
+# 
+# NCSU_INFO:Time 3982.81 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 3982.87 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 3982.87 us : W/R : 1 , Addr: 0x01, Data: 0x15 
+# 
+# 
+# 
+# NCSU_INFO:Time 3982.95 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:4160.09 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 14, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4160.09 us, op: 0, addr: 00, data: 14 
+# 
+# *********************************************************************************************************
+# time:4160.09 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 15, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4160.09 us, op: 0, addr: 00, data: 15 
+# 
+# NCSU_INFO:Time 4163.39 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 4163.45 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 4163.45 us : W/R : 1 , Addr: 0x01, Data: 0x16 
+# 
+# 
+# 
+# NCSU_INFO:Time 4163.53 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:4340.67 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 15, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4340.67 us, op: 0, addr: 00, data: 15 
+# 
+# *********************************************************************************************************
+# time:4340.67 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 16, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4340.67 us, op: 0, addr: 00, data: 16 
+# 
+# NCSU_INFO:Time 4343.97 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 4344.03 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 4344.03 us : W/R : 1 , Addr: 0x01, Data: 0x17 
+# 
+# 
+# 
+# NCSU_INFO:Time 4344.11 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:4521.25 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 16, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4521.25 us, op: 0, addr: 00, data: 16 
+# 
+# *********************************************************************************************************
+# time:4521.25 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 17, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4521.25 us, op: 0, addr: 00, data: 17 
+# 
+# NCSU_INFO:Time 4524.55 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 4524.61 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 4524.61 us : W/R : 1 , Addr: 0x01, Data: 0x18 
+# 
+# 
+# 
+# NCSU_INFO:Time 4524.69 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:4701.83 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 17, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4701.83 us, op: 0, addr: 00, data: 17 
+# 
+# *********************************************************************************************************
+# time:4701.83 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 18, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4701.83 us, op: 0, addr: 00, data: 18 
+# 
+# NCSU_INFO:Time 4705.13 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 4705.19 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 4705.19 us : W/R : 1 , Addr: 0x01, Data: 0x19 
+# 
+# 
+# 
+# NCSU_INFO:Time 4705.27 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:4882.41 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 18, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4882.41 us, op: 0, addr: 00, data: 18 
+# 
+# *********************************************************************************************************
+# time:4882.41 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 19, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:4882.41 us, op: 0, addr: 00, data: 19 
+# 
+# NCSU_INFO:Time 4885.71 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 4885.77 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 4885.77 us : W/R : 1 , Addr: 0x01, Data: 0x1a 
+# 
+# 
+# 
+# NCSU_INFO:Time 4885.85 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:5062.99 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 19, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5062.99 us, op: 0, addr: 00, data: 19 
+# 
+# *********************************************************************************************************
+# time:5062.99 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1a, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5062.99 us, op: 0, addr: 00, data: 1a 
+# 
+# NCSU_INFO:Time 5066.29 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 5066.35 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 5066.35 us : W/R : 1 , Addr: 0x01, Data: 0x1b 
+# 
+# 
+# 
+# NCSU_INFO:Time 5066.43 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:5243.57 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1a, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5243.57 us, op: 0, addr: 00, data: 1a 
+# 
+# *********************************************************************************************************
+# time:5243.57 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1b, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5243.57 us, op: 0, addr: 00, data: 1b 
+# 
+# NCSU_INFO:Time 5246.87 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 5246.93 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 5246.93 us : W/R : 1 , Addr: 0x01, Data: 0x1c 
+# 
+# 
+# 
+# NCSU_INFO:Time 5247.01 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:5424.15 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1b, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5424.15 us, op: 0, addr: 00, data: 1b 
+# 
+# *********************************************************************************************************
+# time:5424.15 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1c, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5424.15 us, op: 0, addr: 00, data: 1c 
+# 
+# NCSU_INFO:Time 5427.45 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 5427.51 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 5427.51 us : W/R : 1 , Addr: 0x01, Data: 0x1d 
+# 
+# 
+# 
+# NCSU_INFO:Time 5427.59 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:5604.73 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1c, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5604.73 us, op: 0, addr: 00, data: 1c 
+# 
+# *********************************************************************************************************
+# time:5604.73 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1d, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5604.73 us, op: 0, addr: 00, data: 1d 
+# 
+# NCSU_INFO:Time 5608.03 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 5608.09 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 5608.09 us : W/R : 1 , Addr: 0x01, Data: 0x1e 
+# 
+# 
+# 
+# NCSU_INFO:Time 5608.17 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:5785.31 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1d, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5785.31 us, op: 0, addr: 00, data: 1d 
+# 
+# *********************************************************************************************************
+# time:5785.31 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1e, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5785.31 us, op: 0, addr: 00, data: 1e 
+# 
+# NCSU_INFO:Time 5788.61 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 5788.67 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 5788.67 us : W/R : 1 , Addr: 0x01, Data: 0x1f 
+# 
+# 
+# 
+# NCSU_INFO:Time 5788.75 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:5965.89 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1e, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5965.89 us, op: 0, addr: 00, data: 1e 
+# 
+# *********************************************************************************************************
+# time:5965.89 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1f, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5965.89 us, op: 0, addr: 00, data: 1f 
+# 
+# NCSU_INFO:Time 5969.19 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 5969.25 us:ncsu_component::nb_put():  of env.coverage called
+# 
+# time:5986.09 us,---------------------Stop condition detected----------------
+# 
+# *********************************************************************************************************
+# time:5986.09 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 1f, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5986.09 us, op: 0, addr: 00, data: 1f 
+# 
+# 
+# 
+# ---------------------------------------------------------------
+# Task 2: Reading 32 incrementing values from 100 to 131 to slave
+# ---------------------------------------------------------------
+# 
+# 
+# time: 5986.15 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run sending start command
+# NCSU_INFO:Time 5986.17 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 5986.23 us:ncsu_component::nb_put():  of env.coverage called
+# 
+# 
+# env.pred WB: Time 5986.23 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# env.pred WB: Time 5986.23 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# 
+# time 5995.89 us,------------- Start condition detected-------------
+# 
+# *********************************************************************************************************
+# time:5995.89 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - , op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:5995.89 us, op: 0, addr: 00, data:  
+# 
+# NCSU_INFO:Time 6005.35 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 6005.35 us : W/R : 0 , Addr: 0x02, Data: 0x84 
+# 
+# NCSU_INFO:Time 6005.41 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 6005.41 us : W/R : 1 , Addr: 0x01, Data: 0x45 
+# 
+# 
+# 
+# NCSU_INFO:Time 6005.49 us:ncsu_component::nb_put():  of env.coverage called
+# 
+# time =6154.21 us,------------------- Address capture: 45--------------------
+# 
+# time: 6154.21 us, top.i2c_bus.monitor Address Captured 
+# *********************************************************************************************************
+# time:6182.63 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 22, data - , op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:6182.63 us, op: 1, addr: 22, data:  
+# 
+# time: 6185.91 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 6185.93 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 6185.99 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:6343.09 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 64, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:6343.09 us, op: 1, addr: 00, data: 64 
+# 
+# NCSU_INFO:Time 6366.43 us:ncsu_component::nb_put():  of env.coverage called
+# time: 6366.47 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 6366.49 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 6366.49 us : W/R : 0 , Addr: 0x01, Data: 0x64 
+# 
+# 
+# 
+# NCSU_INFO:Time 6366.55 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:6523.65 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 64, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:6523.65 us, op: 1, addr: 00, data: 64 
+# 
+# *********************************************************************************************************
+# time:6523.65 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 65, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:6523.65 us, op: 1, addr: 00, data: 65 
+# 
+# NCSU_INFO:Time 6546.99 us:ncsu_component::nb_put():  of env.coverage called
+# time: 6547.03 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 6547.05 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 6547.05 us : W/R : 0 , Addr: 0x01, Data: 0x65 
+# 
+# 
+# 
+# NCSU_INFO:Time 6547.11 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:6704.21 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 65, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:6704.21 us, op: 1, addr: 00, data: 65 
+# 
+# *********************************************************************************************************
+# time:6704.21 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 66, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:6704.21 us, op: 1, addr: 00, data: 66 
+# 
+# NCSU_INFO:Time 6727.55 us:ncsu_component::nb_put():  of env.coverage called
+# time: 6727.59 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 6727.61 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 6727.61 us : W/R : 0 , Addr: 0x01, Data: 0x66 
+# 
+# 
+# 
+# NCSU_INFO:Time 6727.67 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:6884.77 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 66, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:6884.77 us, op: 1, addr: 00, data: 66 
+# 
+# *********************************************************************************************************
+# time:6884.77 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 67, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:6884.77 us, op: 1, addr: 00, data: 67 
+# 
+# NCSU_INFO:Time 6908.11 us:ncsu_component::nb_put():  of env.coverage called
+# time: 6908.15 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 6908.17 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 6908.17 us : W/R : 0 , Addr: 0x01, Data: 0x67 
+# 
+# 
+# 
+# NCSU_INFO:Time 6908.23 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:7065.33 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 67, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7065.33 us, op: 1, addr: 00, data: 67 
+# 
+# *********************************************************************************************************
+# time:7065.33 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 68, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7065.33 us, op: 1, addr: 00, data: 68 
+# 
+# NCSU_INFO:Time 7088.67 us:ncsu_component::nb_put():  of env.coverage called
+# time: 7088.71 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 7088.73 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 7088.73 us : W/R : 0 , Addr: 0x01, Data: 0x68 
+# 
+# 
+# 
+# NCSU_INFO:Time 7088.79 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:7245.89 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 68, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7245.89 us, op: 1, addr: 00, data: 68 
+# 
+# *********************************************************************************************************
+# time:7245.89 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 69, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7245.89 us, op: 1, addr: 00, data: 69 
+# 
+# NCSU_INFO:Time 7269.23 us:ncsu_component::nb_put():  of env.coverage called
+# time: 7269.27 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 7269.29 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 7269.29 us : W/R : 0 , Addr: 0x01, Data: 0x69 
+# 
+# 
+# 
+# NCSU_INFO:Time 7269.35 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:7426.45 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 69, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7426.45 us, op: 1, addr: 00, data: 69 
+# 
+# *********************************************************************************************************
+# time:7426.45 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6a, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7426.45 us, op: 1, addr: 00, data: 6a 
+# 
+# NCSU_INFO:Time 7449.79 us:ncsu_component::nb_put():  of env.coverage called
+# time: 7449.83 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 7449.85 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 7449.85 us : W/R : 0 , Addr: 0x01, Data: 0x6a 
+# 
+# 
+# 
+# NCSU_INFO:Time 7449.91 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:7607.01 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6a, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7607.01 us, op: 1, addr: 00, data: 6a 
+# 
+# *********************************************************************************************************
+# time:7607.01 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6b, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7607.01 us, op: 1, addr: 00, data: 6b 
+# 
+# NCSU_INFO:Time 7630.35 us:ncsu_component::nb_put():  of env.coverage called
+# time: 7630.39 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 7630.41 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 7630.41 us : W/R : 0 , Addr: 0x01, Data: 0x6b 
+# 
+# 
+# 
+# NCSU_INFO:Time 7630.47 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:7787.57 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6b, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7787.57 us, op: 1, addr: 00, data: 6b 
+# 
+# *********************************************************************************************************
+# time:7787.57 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6c, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7787.57 us, op: 1, addr: 00, data: 6c 
+# 
+# NCSU_INFO:Time 7810.91 us:ncsu_component::nb_put():  of env.coverage called
+# time: 7810.95 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 7810.97 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 7810.97 us : W/R : 0 , Addr: 0x01, Data: 0x6c 
+# 
+# 
+# 
+# NCSU_INFO:Time 7811.03 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:7968.13 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6c, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7968.13 us, op: 1, addr: 00, data: 6c 
+# 
+# *********************************************************************************************************
+# time:7968.13 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6d, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:7968.13 us, op: 1, addr: 00, data: 6d 
+# 
+# NCSU_INFO:Time 7991.47 us:ncsu_component::nb_put():  of env.coverage called
+# time: 7991.51 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 7991.53 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 7991.53 us : W/R : 0 , Addr: 0x01, Data: 0x6d 
+# 
+# 
+# 
+# NCSU_INFO:Time 7991.59 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:8148.69 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6d, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8148.69 us, op: 1, addr: 00, data: 6d 
+# 
+# *********************************************************************************************************
+# time:8148.69 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6e, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8148.69 us, op: 1, addr: 00, data: 6e 
+# 
+# NCSU_INFO:Time 8172.03 us:ncsu_component::nb_put():  of env.coverage called
+# time: 8172.07 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 8172.09 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 8172.09 us : W/R : 0 , Addr: 0x01, Data: 0x6e 
+# 
+# 
+# 
+# NCSU_INFO:Time 8172.15 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:8329.25 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6e, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8329.25 us, op: 1, addr: 00, data: 6e 
+# 
+# *********************************************************************************************************
+# time:8329.25 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6f, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8329.25 us, op: 1, addr: 00, data: 6f 
+# 
+# NCSU_INFO:Time 8352.59 us:ncsu_component::nb_put():  of env.coverage called
+# time: 8352.63 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 8352.65 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 8352.65 us : W/R : 0 , Addr: 0x01, Data: 0x6f 
+# 
+# 
+# 
+# NCSU_INFO:Time 8352.71 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:8509.81 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 6f, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8509.81 us, op: 1, addr: 00, data: 6f 
+# 
+# *********************************************************************************************************
+# time:8509.81 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 70, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8509.81 us, op: 1, addr: 00, data: 70 
+# 
+# NCSU_INFO:Time 8533.15 us:ncsu_component::nb_put():  of env.coverage called
+# time: 8533.19 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 8533.21 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 8533.21 us : W/R : 0 , Addr: 0x01, Data: 0x70 
+# 
+# 
+# 
+# NCSU_INFO:Time 8533.27 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:8690.37 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 70, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8690.37 us, op: 1, addr: 00, data: 70 
+# 
+# *********************************************************************************************************
+# time:8690.37 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 71, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8690.37 us, op: 1, addr: 00, data: 71 
+# 
+# NCSU_INFO:Time 8713.71 us:ncsu_component::nb_put():  of env.coverage called
+# time: 8713.75 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 8713.77 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 8713.77 us : W/R : 0 , Addr: 0x01, Data: 0x71 
+# 
+# 
+# 
+# NCSU_INFO:Time 8713.83 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:8870.93 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 71, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8870.93 us, op: 1, addr: 00, data: 71 
+# 
+# *********************************************************************************************************
+# time:8870.93 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 72, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:8870.93 us, op: 1, addr: 00, data: 72 
+# 
+# NCSU_INFO:Time 8894.27 us:ncsu_component::nb_put():  of env.coverage called
+# time: 8894.31 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 8894.33 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 8894.33 us : W/R : 0 , Addr: 0x01, Data: 0x72 
+# 
+# 
+# 
+# NCSU_INFO:Time 8894.39 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:9051.49 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 72, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9051.49 us, op: 1, addr: 00, data: 72 
+# 
+# *********************************************************************************************************
+# time:9051.49 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 73, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9051.49 us, op: 1, addr: 00, data: 73 
+# 
+# NCSU_INFO:Time 9074.83 us:ncsu_component::nb_put():  of env.coverage called
+# time: 9074.87 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 9074.89 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 9074.89 us : W/R : 0 , Addr: 0x01, Data: 0x73 
+# 
+# 
+# 
+# NCSU_INFO:Time 9074.95 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:9232.05 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 73, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9232.05 us, op: 1, addr: 00, data: 73 
+# 
+# *********************************************************************************************************
+# time:9232.05 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 74, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9232.05 us, op: 1, addr: 00, data: 74 
+# 
+# NCSU_INFO:Time 9255.39 us:ncsu_component::nb_put():  of env.coverage called
+# time: 9255.43 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 9255.45 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 9255.45 us : W/R : 0 , Addr: 0x01, Data: 0x74 
+# 
+# 
+# 
+# NCSU_INFO:Time 9255.51 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:9412.61 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 74, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9412.61 us, op: 1, addr: 00, data: 74 
+# 
+# *********************************************************************************************************
+# time:9412.61 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 75, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9412.61 us, op: 1, addr: 00, data: 75 
+# 
+# NCSU_INFO:Time 9435.95 us:ncsu_component::nb_put():  of env.coverage called
+# time: 9435.99 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 9436.01 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 9436.01 us : W/R : 0 , Addr: 0x01, Data: 0x75 
+# 
+# 
+# 
+# NCSU_INFO:Time 9436.07 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:9593.17 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 75, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9593.17 us, op: 1, addr: 00, data: 75 
+# 
+# *********************************************************************************************************
+# time:9593.17 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 76, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9593.17 us, op: 1, addr: 00, data: 76 
+# 
+# NCSU_INFO:Time 9616.51 us:ncsu_component::nb_put():  of env.coverage called
+# time: 9616.55 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 9616.57 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 9616.57 us : W/R : 0 , Addr: 0x01, Data: 0x76 
+# 
+# 
+# 
+# NCSU_INFO:Time 9616.63 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:9773.73 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 76, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9773.73 us, op: 1, addr: 00, data: 76 
+# 
+# *********************************************************************************************************
+# time:9773.73 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 77, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9773.73 us, op: 1, addr: 00, data: 77 
+# 
+# NCSU_INFO:Time 9797.07 us:ncsu_component::nb_put():  of env.coverage called
+# time: 9797.11 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 9797.13 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 9797.13 us : W/R : 0 , Addr: 0x01, Data: 0x77 
+# 
+# 
+# 
+# NCSU_INFO:Time 9797.19 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:9954.29 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 77, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9954.29 us, op: 1, addr: 00, data: 77 
+# 
+# *********************************************************************************************************
+# time:9954.29 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 78, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:9954.29 us, op: 1, addr: 00, data: 78 
+# 
+# NCSU_INFO:Time 9977.63 us:ncsu_component::nb_put():  of env.coverage called
+# time: 9977.67 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 9977.69 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 9977.69 us : W/R : 0 , Addr: 0x01, Data: 0x78 
+# 
+# 
+# 
+# NCSU_INFO:Time 9977.75 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:10134.85 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 78, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10134.85 us, op: 1, addr: 00, data: 78 
+# 
+# *********************************************************************************************************
+# time:10134.85 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 79, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10134.85 us, op: 1, addr: 00, data: 79 
+# 
+# NCSU_INFO:Time 10158.19 us:ncsu_component::nb_put():  of env.coverage called
+# time: 10158.23 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 10158.25 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 10158.25 us : W/R : 0 , Addr: 0x01, Data: 0x79 
+# 
+# 
+# 
+# NCSU_INFO:Time 10158.31 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:10315.41 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 79, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10315.41 us, op: 1, addr: 00, data: 79 
+# 
+# *********************************************************************************************************
+# time:10315.41 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7a, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10315.41 us, op: 1, addr: 00, data: 7a 
+# 
+# NCSU_INFO:Time 10338.75 us:ncsu_component::nb_put():  of env.coverage called
+# time: 10338.79 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 10338.81 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 10338.81 us : W/R : 0 , Addr: 0x01, Data: 0x7a 
+# 
+# 
+# 
+# NCSU_INFO:Time 10338.87 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:10495.97 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7a, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10495.97 us, op: 1, addr: 00, data: 7a 
+# 
+# *********************************************************************************************************
+# time:10495.97 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7b, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10495.97 us, op: 1, addr: 00, data: 7b 
+# 
+# NCSU_INFO:Time 10519.31 us:ncsu_component::nb_put():  of env.coverage called
+# time: 10519.35 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 10519.37 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 10519.37 us : W/R : 0 , Addr: 0x01, Data: 0x7b 
+# 
+# 
+# 
+# NCSU_INFO:Time 10519.43 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:10676.53 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7b, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10676.53 us, op: 1, addr: 00, data: 7b 
+# 
+# *********************************************************************************************************
+# time:10676.53 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7c, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10676.53 us, op: 1, addr: 00, data: 7c 
+# 
+# NCSU_INFO:Time 10699.87 us:ncsu_component::nb_put():  of env.coverage called
+# time: 10699.91 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 10699.93 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 10699.93 us : W/R : 0 , Addr: 0x01, Data: 0x7c 
+# 
+# 
+# 
+# NCSU_INFO:Time 10699.99 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:10857.09 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7c, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10857.09 us, op: 1, addr: 00, data: 7c 
+# 
+# *********************************************************************************************************
+# time:10857.09 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7d, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:10857.09 us, op: 1, addr: 00, data: 7d 
+# 
+# NCSU_INFO:Time 10880.43 us:ncsu_component::nb_put():  of env.coverage called
+# time: 10880.47 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 10880.49 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 10880.49 us : W/R : 0 , Addr: 0x01, Data: 0x7d 
+# 
+# 
+# 
+# NCSU_INFO:Time 10880.55 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:11037.65 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7d, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11037.65 us, op: 1, addr: 00, data: 7d 
+# 
+# *********************************************************************************************************
+# time:11037.65 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7e, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11037.65 us, op: 1, addr: 00, data: 7e 
+# 
+# NCSU_INFO:Time 11060.99 us:ncsu_component::nb_put():  of env.coverage called
+# time: 11061.03 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 11061.05 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 11061.05 us : W/R : 0 , Addr: 0x01, Data: 0x7e 
+# 
+# 
+# 
+# NCSU_INFO:Time 11061.11 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:11218.21 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7e, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11218.21 us, op: 1, addr: 00, data: 7e 
+# 
+# *********************************************************************************************************
+# time:11218.21 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7f, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11218.21 us, op: 1, addr: 00, data: 7f 
+# 
+# NCSU_INFO:Time 11241.55 us:ncsu_component::nb_put():  of env.coverage called
+# time: 11241.59 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 11241.61 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 11241.61 us : W/R : 0 , Addr: 0x01, Data: 0x7f 
+# 
+# 
+# 
+# NCSU_INFO:Time 11241.67 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:11398.77 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 7f, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11398.77 us, op: 1, addr: 00, data: 7f 
+# 
+# *********************************************************************************************************
+# time:11398.77 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 80, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11398.77 us, op: 1, addr: 00, data: 80 
+# 
+# NCSU_INFO:Time 11422.11 us:ncsu_component::nb_put():  of env.coverage called
+# time: 11422.15 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 11422.17 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 11422.17 us : W/R : 0 , Addr: 0x01, Data: 0x80 
+# 
+# 
+# 
+# NCSU_INFO:Time 11422.23 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:11579.33 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 80, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11579.33 us, op: 1, addr: 00, data: 80 
+# 
+# *********************************************************************************************************
+# time:11579.33 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 81, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11579.33 us, op: 1, addr: 00, data: 81 
+# 
+# NCSU_INFO:Time 11602.67 us:ncsu_component::nb_put():  of env.coverage called
+# time: 11602.71 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 11602.73 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 11602.73 us : W/R : 0 , Addr: 0x01, Data: 0x81 
+# 
+# 
+# 
+# NCSU_INFO:Time 11602.79 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:11759.89 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 81, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11759.89 us, op: 1, addr: 00, data: 81 
+# 
+# *********************************************************************************************************
+# time:11759.89 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 82, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11759.89 us, op: 1, addr: 00, data: 82 
+# 
+# NCSU_INFO:Time 11783.23 us:ncsu_component::nb_put():  of env.coverage called
+# time: 11783.27 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run, Receving data
+# NCSU_INFO:Time 11783.29 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 11783.29 us : W/R : 0 , Addr: 0x01, Data: 0x82 
+# 
+# 
+# 
+# NCSU_INFO:Time 11783.35 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:11940.45 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 82, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11940.45 us, op: 1, addr: 00, data: 82 
+# 
+# *********************************************************************************************************
+# time:11940.45 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 83, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:11940.45 us, op: 1, addr: 00, data: 83 
+# 
+# NCSU_INFO:Time 11963.79 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 11963.85 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 11963.85 us : W/R : 0 , Addr: 0x01, Data: 0x83 
+# 
+# 
+# 
+# NCSU_INFO:Time 11963.91 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:12121.01 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 83, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:12121.01 us, op: 1, addr: 00, data: 83 
+# 
+# NCSU_INFO:Time 12144.35 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 12144.41 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:12161.25 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - 83, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:12161.25 us, op: 1, addr: 00, data: 83 
+# 
+# 
+# 
+# ---------------------------------------------------------------
+#     Task 3: 64 Alternate Read and writes incrementing values   
+# ---------------------------------------------------------------
+# 
+# 
+# NCSU_INFO:Time 12161.33 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 12161.39 us:ncsu_component::nb_put():  of env.coverage called
+# 
+# 
+# env.pred WB: Time 12161.39 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# env.pred WB: Time 12161.39 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# *********************************************************************************************************
+# time:12171.05 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 00, data - , op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:12171.05 us, op: 1, addr: 00, data:  
+# 
+# 
+# time 12171.05 us,------------- Start condition detected-------------
+# 
+# NCSU_INFO:Time 12180.51 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 12180.51 us : W/R : 0 , Addr: 0x02, Data: 0x84 
+# 
+# NCSU_INFO:Time 12180.57 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 12180.57 us : W/R : 1 , Addr: 0x01, Data: 0x44 
+# 
+# 
+# 
+# NCSU_INFO:Time 12180.65 us:ncsu_component::nb_put():  of env.coverage called
+# time: 12317.71 us, top.i2c_bus.monitor Address Captured 
+# 
+# time =12329.37 us,------------------- Address capture: 44--------------------
+# 
+# *********************************************************************************************************
+# time:12337.75 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 11, data - , op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:12337.75 us, op: 0, addr: 11, data:  
+# 
+# 
+#  time:12361.07 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run Sending Data for Alternate write
+# NCSU_INFO:Time 12361.09 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 12361.15 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 12361.15 us : W/R : 1 , Addr: 0x01, Data: 0x40 
+# 
+# 
+# 
+# NCSU_INFO:Time 12361.23 us:ncsu_component::nb_put():  of env.coverage called
+# *********************************************************************************************************
+# time:12518.33 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - , op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:12518.33 us, op: 0, addr: 00, data:  
+# 
+# *********************************************************************************************************
+# time:12538.37 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 40, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:12538.37 us, op: 0, addr: 00, data: 40 
+# 
+# time: 12541.65 us, i2cmb_env_pkg.i2cmb_generator.run.wb_run,  sending repeated start command
+# NCSU_INFO:Time 12541.67 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 12541.73 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 12541.73 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# *********************************************************************************************************
+# time:12561.77 us, i2c_pkg.i2c_monitor.run, I2C_BUS WRITE Transfer: addr- 00, data - 40, op -0         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:12561.77 us, op: 0, addr: 00, data: 40 
+# 
+# time: 12561.77 us,
+# --------------------- Restart condition detected------------------
+# 
+# NCSU_INFO:Time 12571.23 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 12571.23 us : W/R : 0 , Addr: 0x02, Data: 0x84 
+# 
+# NCSU_INFO:Time 12571.29 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 12571.29 us : W/R : 1 , Addr: 0x01, Data: 0x45 
+# 
+# 
+# 
+# NCSU_INFO:Time 12571.37 us:ncsu_component::nb_put():  of env.coverage called
+# time: 12720.09 us, top.i2c_bus.monitor Address Captured 
+# time = 12720.09 us,
+# ----------------- Address capture: 45-------------------
+# 
+# *********************************************************************************************************
+# time:12720.09 us, i2c_pkg.i2c_monitor.run, I2C_BUS READ Transfer: addr- 22, data - 40, op - 1         
+# *********************************************************************************************************
+# env.scbd nb_put: actual transaction I2C: time:12720.09 us, op: 1, addr: 22, data: 40 
+# 
+# NCSU_INFO:Time 12720.55 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 12720.61 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 12720.69 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 12720.75 us:ncsu_component::nb_put():  of env.coverage called
+# env.pred WB: Time 12720.75 us : W/R : 0 , Addr: 0x01, Data: 0xff 
+# 
+# 
+# 
+# NCSU_INFO:Time 12720.81 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 12720.89 us:ncsu_component::nb_put():  of env.coverage called
+# NCSU_INFO:Time 12720.95 us:ncsu_component::nb_put():  of env.coverage called
+# 
+# 
+# env.pred WB: Time 12720.95 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 
+# env.pred WB: Time 12720.95 us : W/R : 1 , Addr: 0x02, Data: 0x04 
+# 

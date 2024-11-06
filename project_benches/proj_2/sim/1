@@ -1,0 +1,310 @@
+rm -rf work *.wlf transcript
+vcom ../rtl/iicmb_int_pkg.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:26 on Mar 23,2023
+vcom ../rtl/iicmb_int_pkg.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package iicmb_int_pkg
+-- Compiling package body iicmb_int_pkg
+-- Loading package iicmb_int_pkg
+End time: 21:29:27 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vcom ../rtl/iicmb_pkg.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:27 on Mar 23,2023
+vcom ../rtl/iicmb_pkg.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package iicmb_pkg
+-- Compiling package body iicmb_pkg
+-- Loading package iicmb_pkg
+End time: 21:29:28 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vcom ../rtl/mbyte.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:28 on Mar 23,2023
+vcom ../rtl/mbyte.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading package iicmb_int_pkg
+-- Compiling entity mbyte
+-- Compiling architecture rtl of mbyte
+End time: 21:29:29 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vcom ../rtl/mbit.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:29 on Mar 23,2023
+vcom ../rtl/mbit.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package iicmb_int_pkg
+-- Compiling entity mbit
+-- Compiling architecture rtl of mbit
+End time: 21:29:29 on Mar 23,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vcom ../rtl/bus_state.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:29 on Mar 23,2023
+vcom ../rtl/bus_state.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bus_state
+-- Compiling architecture rtl of bus_state
+End time: 21:29:30 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vcom ../rtl/filter.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:30 on Mar 23,2023
+vcom ../rtl/filter.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity filter
+-- Compiling architecture rtl of filter
+End time: 21:29:30 on Mar 23,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vcom ../rtl/conditioner.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:30 on Mar 23,2023
+vcom ../rtl/conditioner.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity conditioner
+-- Compiling architecture str of conditioner
+End time: 21:29:31 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vcom ../rtl/conditioner_mux.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:31 on Mar 23,2023
+vcom ../rtl/conditioner_mux.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity conditioner_mux
+-- Compiling architecture str of conditioner_mux
+End time: 21:29:32 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vcom ../rtl/iicmb_m.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:32 on Mar 23,2023
+vcom ../rtl/iicmb_m.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading package iicmb_int_pkg
+-- Compiling entity iicmb_m
+-- Compiling architecture str of iicmb_m
+End time: 21:29:32 on Mar 23,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vcom ../rtl/regblock.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:32 on Mar 23,2023
+vcom ../rtl/regblock.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Compiling entity regblock
+-- Compiling architecture rtl of regblock
+End time: 21:29:33 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vcom ../rtl/wishbone.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:33 on Mar 23,2023
+vcom ../rtl/wishbone.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity wishbone
+-- Compiling architecture rtl of wishbone
+End time: 21:29:34 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vcom ../rtl/iicmb_m_wb.vhd
+QuestaSim vcom 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:34 on Mar 23,2023
+vcom ../rtl/iicmb_m_wb.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity iicmb_m_wb
+-- Compiling architecture str of iicmb_m_wb
+End time: 21:29:34 on Mar 23,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/interface_packages/wb_pkg/wb_pkg.sv
+QuestaSim vlog 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:34 on Mar 23,2023
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/interface_packages/wb_pkg/wb_pkg.sv 
+-- Compiling package ncsu_pkg
+-- Compiling package parameter_pkg
+-- Compiling package wb_pkg
+-- Importing package ncsu_pkg
+-- Importing package parameter_pkg
+
+Top level modules:
+	--none--
+End time: 21:29:35 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/interface_packages/wb_pkg/src/wb_if.sv
+QuestaSim vlog 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:35 on Mar 23,2023
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/interface_packages/wb_pkg/src/wb_if.sv 
+-- Compiling interface wb_if
+
+Top level modules:
+	--none--
+End time: 21:29:36 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog +incdir+/mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/ncsu_pkg /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/ncsu_pkg/ncsu_pkg.sv
+QuestaSim vlog 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:36 on Mar 23,2023
+vlog "+incdir+/mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/ncsu_pkg" /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/ncsu_pkg/ncsu_pkg.sv 
+-- Compiling package ncsu_pkg
+
+Top level modules:
+	--none--
+End time: 21:29:37 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/interface_packages/i2c_pkg/i2c_pkg.sv
+QuestaSim vlog 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:37 on Mar 23,2023
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/interface_packages/i2c_pkg/i2c_pkg.sv 
+-- Compiling package ncsu_pkg
+-- Compiling package parameter_pkg
+-- Compiling package i2c_pkg
+-- Importing package ncsu_pkg
+-- Importing package parameter_pkg
+
+Top level modules:
+	--none--
+End time: 21:29:37 on Mar 23,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv
+QuestaSim vlog 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:37 on Mar 23,2023
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv 
+-- Compiling interface i2c_if
+-- Importing package parameter_pkg
+
+Top level modules:
+	--none--
+End time: 21:29:38 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/environment_packages/i2cmb_env_pkg/i2cmb_env_pkg.sv
+QuestaSim vlog 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:38 on Mar 23,2023
+vlog /mnt/ncsudrive/t/tkulkar/ECE745/project_2/ece745_projects/project_benches/proj_2/sim/../../../verification_ip/environment_packages/i2cmb_env_pkg/i2cmb_env_pkg.sv 
+-- Compiling package i2cmb_env_pkg
+-- Importing package ncsu_pkg
+-- Importing package i2c_pkg
+-- Importing package parameter_pkg
+-- Importing package wb_pkg
+
+Top level modules:
+	--none--
+End time: 21:29:39 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog ../testbench/top.sv
+QuestaSim vlog 2022.2_1 Compiler 2022.05 May 19 2022
+Start time: 21:29:39 on Mar 23,2023
+vlog ../testbench/top.sv 
+-- Compiling module top
+-- Importing package ncsu_pkg
+-- Importing package i2cmb_env_pkg
+-- Importing package i2c_pkg
+-- Importing package parameter_pkg
+-- Importing package wb_pkg
+
+Top level modules:
+	top
+End time: 21:29:40 on Mar 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vopt +acc top -o optimized_debug_top_tb
+QuestaSim vopt 2022.2_1 Compiler 2022.05 May 19 2022
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+Start time: 21:29:40 on Mar 23,2023
+vopt "+acc" top -o optimized_debug_top_tb 
+
+Top level modules:
+	top
+
+Analyzing design...
+-- Loading module top
+-- Importing package ncsu_pkg
+-- Importing package i2cmb_env_pkg
+-- Importing package i2c_pkg
+-- Importing package parameter_pkg
+-- Importing package wb_pkg
+-- Loading interface i2c_if
+-- Loading interface wb_if
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity iicmb_m_wb
+-- Loading architecture str of iicmb_m_wb
+-- Loading entity wishbone
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading entity regblock
+-- Loading package iicmb_int_pkg
+-- Loading entity iicmb_m
+-- Loading architecture rtl of wishbone
+-- Loading architecture rtl of regblock
+-- Loading package body iicmb_pkg
+-- Loading architecture str of iicmb_m
+-- Loading entity mbyte
+-- Loading entity mbit
+-- Loading entity conditioner_mux
+-- Loading package body iicmb_int_pkg
+-- Loading architecture rtl of mbyte
+-- Loading architecture rtl of mbit
+-- Loading architecture str of conditioner_mux
+-- Loading entity conditioner
+-- Loading architecture str of conditioner
+-- Loading entity filter
+-- Loading entity bus_state
+-- Loading architecture rtl of filter
+-- Loading architecture rtl of bus_state
+Optimizing 24 design-units (inlining 0/3 module instances, 0/11 architecture instances):
+-- Optimizing package ncsu_pkg(fast)
+-- Optimizing package parameter_pkg(fast)
+-- Optimizing package i2c_pkg(fast)
+-- Optimizing package wb_pkg(fast)
+-- Optimizing package i2cmb_env_pkg(fast)
+-- Optimizing interface i2c_if(fast__2)
+-- Optimizing interface wb_if(fast__2)
+-- Optimizing module top(fast)
+-- Optimizing interface wb_if(fast)
+-- Optimizing interface i2c_if(fast)
+-- Optimizing architecture rtl of mbit
+** Note: (vopt-143) Recognized 1 FSM in architecture body "mbit(rtl)".
+-- Optimizing architecture str of iicmb_m
+-- Optimizing architecture str of iicmb_m_wb
+-- Optimizing architecture rtl of mbyte
+** Note: (vopt-143) Recognized 1 FSM in architecture body "mbyte(rtl)".
+-- Optimizing architecture rtl of regblock
+-- Optimizing architecture str of conditioner_mux
+-- Optimizing architecture rtl of wishbone
+-- Optimizing package iicmb_pkg
+-- Optimizing package body iicmb_pkg
+-- Optimizing architecture str of conditioner
+-- Optimizing architecture rtl of bus_state
+** Note: (vopt-143) Recognized 1 FSM in architecture body "bus_state(rtl)".
+-- Optimizing architecture rtl of filter
+-- Optimizing package iicmb_int_pkg
+-- Optimizing package body iicmb_int_pkg
+Optimized design name is optimized_debug_top_tb
+End time: 21:29:43 on Mar 23,2023, Elapsed time: 0:00:03
+Errors: 0, Warnings: 1

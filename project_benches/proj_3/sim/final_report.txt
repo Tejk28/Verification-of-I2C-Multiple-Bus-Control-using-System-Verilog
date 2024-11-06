@@ -1,0 +1,580 @@
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /wb_pkg/wb_coverage/i2cmb_register_cg            90.90%        100          -    Uncovered            
+    covered/total bins:                                    40         44          -                      
+    missing/total bins:                                     4         44          -                      
+    % Hit:                                             90.90%        100          -                      
+    type_option.weight=1
+    type_option.goal=100
+    type_option.comment=
+    type_option.strobe=0
+    type_option.merge_instances=auto(0)
+    Coverpoint addr_valid                             100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint data                                   100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint we                                     100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint register_field_aliasing                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          4          -                      
+        missing/total bins:                                 4          4          -                      
+        % Hit:                                          0.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint register_inits                         100.00%        100          -    Covered              
+        covered/total bins:                                 7          7          -                      
+        missing/total bins:                                 0          7          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint bus_status                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint bus_cap_status                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint intr_enable                            100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Cross addr_x_we                                   100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Cross csr_x_intr_x_we                             100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Cross i2cmb_register_inits                        100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+ Covergroup instance env.wb_agt.coverage               90.90%        100          -    Uncovered            
+    covered/total bins:                                    40         44          -                      
+    missing/total bins:                                     4         44          -                      
+    % Hit:                                             90.90%        100          -                      
+    option.name=env.wb_agt.coverage
+    option.weight=1
+    option.goal=100
+    option.comment=
+    option.at_least=1
+    option.auto_bin_max=64
+    option.cross_num_print_missing=0
+    option.detect_overlap=0
+    option.per_instance=1
+    option.get_inst_coverage=0
+    Coverpoint addr_valid                             100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin csr                                             1          1          -    Covered              
+        bin dpr                                           323          1          -    Covered              
+        bin cmdr                                         1039          1          -    Covered              
+        bin fsmr                                            1          1          -    Covered              
+    Coverpoint data                                   100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin wb_data                                      1363          1          -    Covered              
+    Coverpoint we                                     100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin auto[0]                                       616          1          -    Covered              
+        bin auto[1]                                       748          1          -    Covered              
+    Coverpoint register_field_aliasing                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          4          -                      
+        missing/total bins:                                 4          4          -                      
+        % Hit:                                          0.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin csr_write_other_read                            0          1          -    ZERO                 
+        bin dpr_write_other_read                            0          1          -    ZERO                 
+        bin cmdr_write_other_read                           0          1          -    ZERO                 
+        bin fsmr_write_other_read                           0          1          -    ZERO                 
+    Coverpoint register_inits                         100.00%        100          -    Covered              
+        covered/total bins:                                 7          7          -                      
+        missing/total bins:                                 0          7          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin enable                                          1          1          -    Covered              
+        bin set_bus                                         2          1          -    Covered              
+        bin start                                         132          1          -    Covered              
+        bin stop                                           68          1          -    Covered              
+        bin write                                         227          1          -    Covered              
+        bin ack_read                                       33          1          -    Covered              
+        bin nack_read                                      67          1          -    Covered              
+    Coverpoint bus_status                             100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin bus_busy                                       92          1          -    Covered              
+        bin bus_not_busy                                 1272          1          -    Covered              
+    Coverpoint bus_cap_status                         100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin bus_captured                                   97          1          -    Covered              
+        bin bus_not_captured                             1267          1          -    Covered              
+    Coverpoint intr_enable                            100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin intr_en                                       255          1          -    Covered              
+        bin intr_not_en                                  1109          1          -    Covered              
+    Cross addr_x_we                                   100.00%        100          -    Covered              
+        covered/total bins:                                 6          6          -                      
+        missing/total bins:                                 0          6          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.cross_num_print_missing=0
+        Auto, Default and User Defined Bins:
+            bin <cmdr,auto[1]>                            520          1          -    Covered              
+            bin <dpr,auto[1]>                             227          1          -    Covered              
+            bin <csr,auto[1]>                               1          1          -    Covered              
+            bin <fsmr,auto[0]>                              1          1          -    Covered              
+            bin <cmdr,auto[0]>                            519          1          -    Covered              
+            bin <dpr,auto[0]>                              96          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin fsmr_write                           0                     -    ZERO                 
+            ignore_bin csr_read                             0                     -    ZERO                 
+    Cross csr_x_intr_x_we                             100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.cross_num_print_missing=0
+        Auto, Default and User Defined Bins:
+            bin csr_intr_enabl_wr                           1          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin not_csr                           1363                     -    Occurred             
+            ignore_bin csr_intr_not_enabl_rd                0                     -    ZERO                 
+            ignore_bin csr_intr_not_enabl_wr                0                     -    ZERO                 
+            ignore_bin csr_intr_enabl_rd                    0                     -    ZERO                 
+    Cross i2cmb_register_inits                        100.00%        100          -    Covered              
+        covered/total bins:                                13         13          -                      
+        missing/total bins:                                 0         13          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.cross_num_print_missing=0
+        Auto, Default and User Defined Bins:
+            bin enable_detected                             1          1          -    Covered              
+            bin set_bus                                     1          1          -    Covered              
+            bin start                                     130          1          -    Covered              
+            bin stop                                       66          1          -    Covered              
+            bin write                                     226          1          -    Covered              
+            bin nack_read                                  65          1          -    Covered              
+            bin ack_read                                   32          1          -    Covered              
+            bin <dpr,nack_read>                             2          1          -    Covered              
+            bin <dpr,ack_read>                              1          1          -    Covered              
+            bin <dpr,write>                                 1          1          -    Covered              
+            bin <dpr,stop>                                  2          1          -    Covered              
+            bin <dpr,start>                                 2          1          -    Covered              
+            bin <dpr,set_bus>                               1          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin defaults                             0                     -    ZERO                 
+            ignore_bin csr_i                                0                     -    ZERO                 
+            ignore_bin fsmr_i                               0                     -    ZERO                 
+            ignore_bin cmdr_i                               0                     -    ZERO                 
+ TYPE /wb_pkg/wb_coverage/fsm_cg                       61.20%        100          -    Uncovered            
+    covered/total bins:                                    41         87          -                      
+    missing/total bins:                                    46         87          -                      
+    % Hit:                                             47.12%        100          -                      
+    type_option.weight=1
+    type_option.goal=100
+    type_option.comment=
+    type_option.strobe=0
+    type_option.merge_instances=auto(0)
+    Coverpoint addr                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint mbyte_state_cover                      100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint mbyte_state_transitions                 26.31%        100          -    Uncovered            
+        covered/total bins:                                 5         19          -                      
+        missing/total bins:                                14         19          -                      
+        % Hit:                                         26.31%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint mbit_state_cover                       100.00%        100          -    Covered              
+        covered/total bins:                                15         15          -                      
+        missing/total bins:                                 0         15          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Coverpoint mbit_state_transitions                  40.90%        100          -    Uncovered            
+        covered/total bins:                                 9         22          -                      
+        missing/total bins:                                13         22          -                      
+        % Hit:                                         40.90%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+    Cross fsmr_byte_x_addr                              0.00%        100          -    ZERO                 
+        covered/total bins:                                 0         19          -                      
+        missing/total bins:                                19         19          -                      
+        % Hit:                                          0.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+ Covergroup instance env.wb_agt.coverage               61.20%        100          -    Uncovered            
+    covered/total bins:                                    41         87          -                      
+    missing/total bins:                                    46         87          -                      
+    % Hit:                                             47.12%        100          -                      
+    option.name=env.wb_agt.coverage
+    option.weight=1
+    option.goal=100
+    option.comment=
+    option.at_least=1
+    option.auto_bin_max=64
+    option.cross_num_print_missing=0
+    option.detect_overlap=0
+    option.per_instance=1
+    option.get_inst_coverage=0
+    Coverpoint addr                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin csr                                             1          1          -    Covered              
+        bin dpr                                           323          1          -    Covered              
+        bin cmdr                                         1039          1          -    Covered              
+        bin fsmr                                            1          1          -    Covered              
+    Coverpoint mbyte_state_cover                      100.00%        100          -    Covered              
+        covered/total bins:                                 8          8          -                      
+        missing/total bins:                                 0          8          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin idle                                          546          1          -    Covered              
+        bin bus_taken                                      25          1          -    Covered              
+        bin p_start                                         8          1          -    Covered              
+        bin start                                           8          1          -    Covered              
+        bin stop                                          154          1          -    Covered              
+        bin write                                          24          1          -    Covered              
+        bin read                                           36          1          -    Covered              
+        bin wait_state                                     40          1          -    Covered              
+    Coverpoint mbyte_state_transitions                 26.31%        100          -    Uncovered            
+        covered/total bins:                                 5         19          -                      
+        missing/total bins:                                14         19          -                      
+        % Hit:                                         26.31%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin idle_to_idle                                   26          1          -    Covered              
+        bin idle_to_p_start                                 0          1          -    ZERO                 
+        bin p_start_to_start                                0          1          -    ZERO                 
+        bin start_to_bus_taken                              0          1          -    ZERO                 
+        bin start_to_idle                                   8          1          -    Covered              
+        bin bus_taken_to_bus_taken                          0          1          -    ZERO                 
+        bin bus_taken_to_write                              0          1          -    ZERO                 
+        bin bus_taken_to_read                               0          1          -    ZERO                 
+        bin bus_taken_to_start                              0          1          -    ZERO                 
+        bin bus_taken_to_stop                               0          1          -    ZERO                 
+        bin write_to_write                                  0          1          -    ZERO                 
+        bin write_to_bus_take                               0          1          -    ZERO                 
+        bin write_to_idle                                  24          1          -    Covered              
+        bin read_to_read                                    0          1          -    ZERO                 
+        bin read_to_bus_taken                               0          1          -    ZERO                 
+        bin read_to_idle                                    0          1          -    ZERO                 
+        bin stop_to_idle                                  154          1          -    Covered              
+        bin idle_to_wait                                    0          1          -    ZERO                 
+        bin wait_to_idle                                   40          1          -    Covered              
+    Coverpoint mbit_state_cover                       100.00%        100          -    Covered              
+        covered/total bins:                                15         15          -                      
+        missing/total bins:                                 0         15          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin idle                                           18          1          -    Covered              
+        bin start_A                                       460          1          -    Covered              
+        bin start_B                                        72          1          -    Covered              
+        bin start_C                                       146          1          -    Covered              
+        bin rw_A                                          341          1          -    Covered              
+        bin rw_B                                          205          1          -    Covered              
+        bin rw_C                                           10          1          -    Covered              
+        bin rw_D                                           16          1          -    Covered              
+        bin rw_E                                           16          1          -    Covered              
+        bin stop_A                                          8          1          -    Covered              
+        bin stop_B                                          8          1          -    Covered              
+        bin stop_C                                         16          1          -    Covered              
+        bin rstart_A                                       16          1          -    Covered              
+        bin rstart_B                                        8          1          -    Covered              
+        bin rstart_C                                        8          1          -    Covered              
+    Coverpoint mbit_state_transitions                  40.90%        100          -    Uncovered            
+        covered/total bins:                                 9         22          -                      
+        missing/total bins:                                13         22          -                      
+        % Hit:                                         40.90%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin idle_to_idle                                    1          1          -    Covered              
+        bin idle_to_start_A                                 6          1          -    Covered              
+        bin start_A_to_start_B                              9          1          -    Covered              
+        bin start_B_to_start_C                              2          1          -    Covered              
+        bin start_C_to_rw_A                                 8          1          -    Covered              
+        bin rw_A_to_rw_B                                   73          1          -    Covered              
+        bin rw_B_to_rw_C                                    1          1          -    Covered              
+        bin rw_C_to_rw_D                                    0          1          -    ZERO                 
+        bin rw_D_to_rw_E                                    0          1          -    ZERO                 
+        bin rw_E_to_rw_A                                    0          1          -    ZERO                 
+        bin rw_C_to_idle                                    0          1          -    ZERO                 
+        bin rw_E_to_rstart_A                                0          1          -    ZERO                 
+        bin rstart_A_to_rstart_B                            0          1          -    ZERO                 
+        bin rstart_B_to_rstart_C                            0          1          -    ZERO                 
+        bin rstart_C_to_start_A                             6          1          -    Covered              
+        bin rstart_C_to_idle                                0          1          -    ZERO                 
+        bin rw_E_to_stop_A                                  0          1          -    ZERO                 
+        bin stop_A_to_stop_B                                0          1          -    ZERO                 
+        bin stop_B_to_stop_C                                0          1          -    ZERO                 
+        bin stop_C_to_idle                                  0          1          -    ZERO                 
+        bin start_C_to_start_C                             74          1          -    Covered              
+        bin start_C_to_stop_A                               0          1          -    ZERO                 
+    Cross fsmr_byte_x_addr                              0.00%        100          -    ZERO                 
+        covered/total bins:                                 0         19          -                      
+        missing/total bins:                                19         19          -                      
+        % Hit:                                          0.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.cross_num_print_missing=0
+        Auto, Default and User Defined Bins:
+            bin <*,*>                                       0          1         19    ZERO                 
+        Illegal and Ignore Bins:
+            ignore_bin byte_trans                         252                     -    Occurred             
+ TYPE /i2c_pkg/i2c_coverage/i2c_transaction_cg        100.00%        100          -    Covered              
+    covered/total bins:                                     9          9          -                      
+    missing/total bins:                                     0          9          -                      
+    % Hit:                                            100.00%        100          -                      
+    type_option.weight=1
+    type_option.goal=100
+    type_option.comment=
+    type_option.strobe=0
+    type_option.merge_instances=auto(1)
+    Coverpoint addr                                   100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+        bin used[0]                                        66          1          -    Covered              
+    Coverpoint data                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+        bin ranges[0]                                     477          1          -    Covered              
+        bin ranges[1]                                      17          1          -    Covered              
+        bin ranges[2]                                     137          1          -    Covered              
+        bin ranges[3]                                     109          1          -    Covered              
+    Coverpoint op                                     100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+        bin auto[WRITE]                                   738          1          -    Covered              
+        bin auto[READ]                                      1          1          -    Covered              
+    Cross addr_x_op                                   100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        type_option.weight=1
+        type_option.goal=100
+        type_option.comment=
+        Auto, Default and User Defined Bins:
+            bin <used[0],auto[READ]>                        1          1          -    Covered              
+            bin <used[0],auto[WRITE]>                      65          1          -    Covered              
+ Covergroup instance env.i2c_agt.coverage             100.00%        100          -    Covered              
+    covered/total bins:                                     9          9          -                      
+    missing/total bins:                                     0          9          -                      
+    % Hit:                                            100.00%        100          -                      
+    option.name=env.i2c_agt.coverage
+    option.weight=1
+    option.goal=100
+    option.comment=
+    option.at_least=1
+    option.auto_bin_max=64
+    option.cross_num_print_missing=0
+    option.detect_overlap=0
+    option.per_instance=1
+    option.get_inst_coverage=0
+    Coverpoint addr                                   100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin used[0]                                        66          1          -    Covered              
+    Coverpoint data                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin ranges[0]                                     477          1          -    Covered              
+        bin ranges[1]                                      17          1          -    Covered              
+        bin ranges[2]                                     137          1          -    Covered              
+        bin ranges[3]                                     109          1          -    Covered              
+    Coverpoint op                                     100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.auto_bin_max=64
+        option.detect_overlap=0
+        bin auto[WRITE]                                   738          1          -    Covered              
+        bin auto[READ]                                      1          1          -    Covered              
+    Cross addr_x_op                                   100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        option.weight=1
+        option.goal=100
+        option.comment=
+        option.at_least=1
+        option.cross_num_print_missing=0
+        Auto, Default and User Defined Bins:
+            bin <used[0],auto[READ]>                        1          1          -    Covered              
+            bin <used[0],auto[WRITE]>                      65          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 84.03%  COVERGROUP TYPES: 3
